@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_Test" Id="{30a1d997-ce67-4587-85e9-d0cd6a65a2c6}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+//GVL_Test
+VAR_GLOBAL
+  TestINT           : INT := 1234;
+  TestSTRING        : STRING := 'Hello this is a test string';
+  ExampleSTRUCT     : ST_Example;
+  TestARRAY         : ARRAY[0..4] OF INT := [0, 10, 200, 3000, 4000];
+  TestARRAY2        : ARRAY[0..4] OF ST_Example := [(SomeText := 'Just for demo purposes')];
+  TestENUM          : E_TestEnum := E_TestEnum.Running;
+  IncrementingValue : INT; //This should change every 500 ms or so
+  TestTimer         : TON := (PT := T#2S500MS);
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

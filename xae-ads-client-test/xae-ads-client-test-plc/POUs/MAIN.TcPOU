@@ -4,6 +4,9 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	cnt : DINT;
+	nPositionH : REAL;
+	nPositionV : REAL;
+	bExecuteGantryMove : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
